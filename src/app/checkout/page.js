@@ -91,7 +91,7 @@ export default function CheckoutPage() {
         <div className={styles.notice}>
           <Lock size={48} className={styles.lockIcon} />
           <p>{t.checkout.loginRequired}</p>
-          <Link href="/account" className={styles.primaryBtn}>{t.checkout.signIn}</Link>
+          <Link href="/account?redirect=/checkout" className={styles.primaryBtn}>{t.checkout.signIn}</Link>
         </div>
       </div>
     );

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { User, LogOut, Package, ChevronRight } from 'lucide-react';
 import { useI18n } from '../../i18n/LanguageProvider';
 import { useAuth } from '../../store/AuthProvider';
@@ -12,8 +13,21 @@ import styles from './account.module.css';
 export default function AccountPage() {
   const { t } = useI18n();
   const { isLoggedIn, ready } = useAuth();
+  const router = useRouter();
+  const [redirect, setRedirect] = useState(null);
 
-  if (!ready) {
+  // Where to continue after a successful sign in / register (e.g. /checkout).
+  useEffect(() => {
+    const r = new URLSearchParams(window.location.search).get('redirect');
+    if (r && r.startsWith('/')) setRedirect(r);
+  }, []);
+
+  // Once authenticated, resume the flow that sent the shopper here.
+  useEffect(() => {
+    if (ready && isLoggedIn && redirect) router.replace(redirect);
+  }, [ready, isLoggedIn, redirect, router]);
+
+  if (!ready || (isLoggedIn && redirect)) {
     return <div className={styles.page}><p className={styles.loading}>{t.account.working}</p></div>;
   }
   return (
