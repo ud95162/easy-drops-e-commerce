@@ -1,6 +1,8 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { LanguageProvider } from "../i18n/LanguageProvider";
+import { CartProvider } from "../store/CartProvider";
+import { AuthProvider } from "../store/AuthProvider";
 import "./globals.css";
 
 export const metadata = {
@@ -13,9 +15,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <LanguageProvider>
-          <Header />
-          <main>{children}</main>
-          <Footer />
+          <AuthProvider>
+            <CartProvider>
+              <Header />
+              <main>{children}</main>
+              <Footer />
+            </CartProvider>
+          </AuthProvider>
         </LanguageProvider>
       </body>
     </html>

@@ -49,6 +49,88 @@ export const dictionary = {
     itemMany: 'items',
     emptyCategory: 'No products available in this category yet.',
 
+    // Product detail
+    detail: {
+      inStock: 'In stock',
+      outOfStock: 'Out of stock',
+      quantity: 'Quantity',
+      addToCart: 'Add to Cart',
+      added: 'Added to cart',
+      buyNow: 'Buy Now',
+      youSave: 'You save',
+      related: 'You might also like',
+      backToShop: 'Back to shopping',
+      description:
+        'Fresh and quality-checked, delivered to your door. Prices update live from our store.',
+    },
+
+    // Cart
+    cartPage: {
+      title: 'Your Cart',
+      empty: 'Your cart is empty.',
+      startShopping: 'Start shopping',
+      continueShopping: 'Continue Shopping',
+      item: 'Item',
+      price: 'Price',
+      qty: 'Qty',
+      total: 'Total',
+      remove: 'Remove',
+      subtotal: 'Subtotal',
+      delivery: 'Delivery',
+      free: 'Free',
+      grandTotal: 'Total',
+      checkout: 'Proceed to Checkout',
+      clear: 'Clear cart',
+    },
+
+    // Checkout
+    checkout: {
+      title: 'Checkout',
+      deliveryDetails: 'Delivery Details',
+      name: 'Full name',
+      phone: 'Phone number',
+      address: 'Delivery address',
+      note: 'Order note (optional)',
+      orderSummary: 'Order Summary',
+      placeOrder: 'Place Order',
+      placing: 'Placing order…',
+      loginRequired: 'Please sign in to place your order.',
+      signIn: 'Sign In',
+      emptyCart: 'Your cart is empty.',
+      successTitle: 'Order placed!',
+      successBody:
+        'Thanks for your order. We will confirm it shortly. You can track it under your account.',
+      viewOrders: 'View my orders',
+      backHome: 'Back to home',
+      payNote: 'Pay on delivery. Your order stays pending until we confirm it.',
+    },
+
+    // Account / auth
+    account: {
+      title: 'My Account',
+      signIn: 'Sign In',
+      register: 'Create Account',
+      email: 'Email',
+      password: 'Password',
+      name: 'Full name',
+      phone: 'Phone (optional)',
+      address: 'Address (optional)',
+      signInCta: 'Sign In',
+      registerCta: 'Create Account',
+      noAccount: "Don't have an account?",
+      haveAccount: 'Already have an account?',
+      signOut: 'Sign Out',
+      profile: 'Profile',
+      myOrders: 'My Orders',
+      noOrders: 'You have no orders yet.',
+      orderNo: 'Order',
+      status: 'Status',
+      placedOn: 'Placed on',
+      working: 'Please wait…',
+      saveProfile: 'Save changes',
+      saved: 'Saved.',
+    },
+
     footer: {
       description:
         'Your trusted online grocery store. Bringing the freshest produce, daily essentials, and exclusive discounts right to your doorstep.',
@@ -117,6 +199,88 @@ export const dictionary = {
     itemOne: 'අයිතමය',
     itemMany: 'අයිතම',
     emptyCategory: 'මෙම වර්ගයේ භාණ්ඩ තවම නොමැත.',
+
+    // Product detail
+    detail: {
+      inStock: 'තොගයේ ඇත',
+      outOfStock: 'තොගයේ නැත',
+      quantity: 'ප්‍රමාණය',
+      addToCart: 'කරත්තයට එක් කරන්න',
+      added: 'කරත්තයට එක් කළා',
+      buyNow: 'දැන් මිලදී ගන්න',
+      youSave: 'ඔබ ඉතිරි කරයි',
+      related: 'ඔබට මේවාත් කැමති විය හැක',
+      backToShop: 'නැවත සාප්පුවට',
+      description:
+        'නැවුම්, ගුණාත්මක පරීක්ෂා කළ භාණ්ඩ ඔබේ දොරකඩටම. මිල ගණන් අපගේ වෙළඳසැලෙන් සජීවීව යාවත්කාලීන වේ.',
+    },
+
+    // Cart
+    cartPage: {
+      title: 'ඔබේ කරත්තය',
+      empty: 'ඔබේ කරත්තය හිස්ය.',
+      startShopping: 'සාප්පු යාම ආරම්භ කරන්න',
+      continueShopping: 'සාප්පු යාම දිගටම',
+      item: 'භාණ්ඩය',
+      price: 'මිල',
+      qty: 'ගණන',
+      total: 'එකතුව',
+      remove: 'ඉවත් කරන්න',
+      subtotal: 'උප එකතුව',
+      delivery: 'බෙදාහැරීම',
+      free: 'නොමිලේ',
+      grandTotal: 'එකතුව',
+      checkout: 'ගෙවීමට යන්න',
+      clear: 'කරත්තය හිස් කරන්න',
+    },
+
+    // Checkout
+    checkout: {
+      title: 'ගෙවීම',
+      deliveryDetails: 'බෙදාහැරීමේ විස්තර',
+      name: 'සම්පූර්ණ නම',
+      phone: 'දුරකථන අංකය',
+      address: 'බෙදාහැරීමේ ලිපිනය',
+      note: 'ඇණවුම් සටහන (විකල්ප)',
+      orderSummary: 'ඇණවුම් සාරාංශය',
+      placeOrder: 'ඇණවුම තබන්න',
+      placing: 'ඇණවුම තබමින්…',
+      loginRequired: 'ඇණවුම තැබීමට කරුණාකර පිවිසෙන්න.',
+      signIn: 'පිවිසෙන්න',
+      emptyCart: 'ඔබේ කරත්තය හිස්ය.',
+      successTitle: 'ඇණවුම තැබුවා!',
+      successBody:
+        'ඔබේ ඇණවුමට ස්තුතියි. අපි එය ඉක්මනින් තහවුරු කරන්නෙමු. ඔබට එය ඔබේ ගිණුමෙන් නිරීක්ෂණය කළ හැක.',
+      viewOrders: 'මගේ ඇණවුම් බලන්න',
+      backHome: 'මුල් පිටුවට',
+      payNote: 'බෙදාහැරීමේදී ගෙවන්න. අප තහවුරු කරන තෙක් ඔබේ ඇණවුම පොරොත්තුවේ පවතී.',
+    },
+
+    // Account / auth
+    account: {
+      title: 'මගේ ගිණුම',
+      signIn: 'පිවිසෙන්න',
+      register: 'ගිණුමක් සාදන්න',
+      email: 'විද්‍යුත් තැපෑල',
+      password: 'මුරපදය',
+      name: 'සම්පූර්ණ නම',
+      phone: 'දුරකථනය (විකල්ප)',
+      address: 'ලිපිනය (විකල්ප)',
+      signInCta: 'පිවිසෙන්න',
+      registerCta: 'ගිණුමක් සාදන්න',
+      noAccount: 'ගිණුමක් නැද්ද?',
+      haveAccount: 'දැනටමත් ගිණුමක් තිබේද?',
+      signOut: 'පිටවෙන්න',
+      profile: 'පැතිකඩ',
+      myOrders: 'මගේ ඇණවුම්',
+      noOrders: 'ඔබට තවම ඇණවුම් නැත.',
+      orderNo: 'ඇණවුම',
+      status: 'තත්ත්වය',
+      placedOn: 'තැබූ දිනය',
+      working: 'කරුණාකර රැඳී සිටින්න…',
+      saveProfile: 'වෙනස්කම් සුරකින්න',
+      saved: 'සුරකින ලදී.',
+    },
 
     footer: {
       description:

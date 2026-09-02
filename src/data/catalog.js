@@ -84,6 +84,19 @@ export async function getAllProducts() {
   return fetchProducts();
 }
 
+/** A single product by id (the POS exposes only the list, so we filter it). */
+export async function getProductById(id) {
+  const products = await getAllProducts();
+  return products.find((p) => p.id === id) || null;
+}
+
+/** Up to `limit` other in-stock products in the same category. */
+export async function getRelatedProducts(product, limit = 6) {
+  if (!product?.category) return [];
+  const products = await fetchProducts({ category: product.category });
+  return products.filter((p) => p.id !== product.id && p.inStock).slice(0, limit);
+}
+
 /** Top discounted, in-stock products — used for the "Hot Deals" row. */
 export async function getHotDeals(limit = 8) {
   const products = await getAllProducts();

@@ -5,10 +5,12 @@ import Image from 'next/image';
 import { Search, ShoppingCart, User, Languages } from 'lucide-react';
 import { categories } from '../data/catalog';
 import { useI18n } from '../i18n/LanguageProvider';
+import { useCart } from '../store/CartProvider';
 import styles from './Header.module.css';
 
 export default function Header() {
   const { t, toggle } = useI18n();
+  const { count } = useCart();
 
   return (
     <>
@@ -43,13 +45,13 @@ export default function Header() {
               <Languages size={18} />
               {t.switchTo}
             </button>
-            <button className={styles.actionButton} aria-label={t.account}>
+            <Link href="/account" className={styles.actionButton} aria-label={t.account}>
               <User size={24} />
-            </button>
-            <button className={styles.actionButton} aria-label={t.cart}>
+            </Link>
+            <Link href="/cart" className={styles.actionButton} aria-label={t.cart}>
               <ShoppingCart size={24} />
-              <span className={styles.badge}>3</span>
-            </button>
+              {count > 0 && <span className={styles.badge}>{count}</span>}
+            </Link>
           </div>
         </div>
       </header>

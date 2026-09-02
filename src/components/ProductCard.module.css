@@ -147,3 +147,10 @@
   color: var(--brand-primary);
   background-color: #f6fbf3;
 }
+
+.titleLink {
+  display: block;
+}
+.titleLink:hover .title {
+  color: var(--brand-primary);
+}
