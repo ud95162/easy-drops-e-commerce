@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { categories, getCategoryBySlug, getProductsByCategory } from '../../../data/catalog';
+import { categories, getCategoryBySlug, getProductsByCategory, getSubcategories } from '../../../data/catalog';
 import CategoryContent from './category-content';
 import styles from './page.module.css';
 
@@ -27,10 +27,16 @@ export default async function CategoryPage({ params }) {
   }
 
   const products = await getProductsByCategory(slug);
+  const subs = getSubcategories(slug);
 
   return (
     <div className={styles.page}>
-      <CategoryContent slug={slug} fallbackName={category.name} products={products} />
+      <CategoryContent
+        slug={slug}
+        fallbackName={category.name}
+        products={products}
+        subs={subs}
+      />
     </div>
   );
 }

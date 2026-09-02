@@ -9,15 +9,18 @@ export const dictionary = {
     cart: 'Cart',
 
     categories: {
-      'pantry-staples': 'Pantry Staples',
-      'snacks-sweets': 'Snacks & Sweets',
-      beverages: 'Beverages',
-      household: 'Household',
-      'personal-care': 'Personal Care',
-      'dairy-products': 'Dairy Products',
-      'baby-care': 'Baby Care',
-      'pet-supplies': 'Pet Supplies',
+      'beverages-snacks': 'Beverages & Snacks',
+      grocery: 'Grocery',
+      'vegetables-fruits': 'Vegetables & Fruits',
+      'frozen-desserts': 'Frozen & Desserts',
+      'gifts-lifestyle': 'Gifts & Lifestyle',
+      'prepared-food': 'Prepared Food',
+      'health-personal-care': 'Health & Personal Care',
+      'household-essentials': 'Household & Essentials',
+      'storage-others': 'Storage and others',
+      'umbrellas-accessories': 'Umbrellas & Accessories',
     },
+    allProducts: 'All',
 
     hero: [
       {
@@ -160,15 +163,18 @@ export const dictionary = {
     cart: 'කරත්තය',
 
     categories: {
-      'pantry-staples': 'අත්‍යවශ්‍ය ද්‍රව්‍ය',
-      'snacks-sweets': 'කෙටි කෑම සහ රසකැවිලි',
-      beverages: 'බීම වර්ග',
-      household: 'ගෘහ භාණ්ඩ',
-      'personal-care': 'පුද්ගලික සත්කාර',
-      'dairy-products': 'කිරි නිෂ්පාදන',
-      'baby-care': 'ළදරු සත්කාර',
-      'pet-supplies': 'සුරතල් සතුන්ට',
+      'beverages-snacks': 'බීම සහ කෙටි කෑම',
+      grocery: 'සිල්ලර භාණ්ඩ',
+      'vegetables-fruits': 'එළවළු සහ පලතුරු',
+      'frozen-desserts': 'ශීත කළ සහ අතුරුපස',
+      'gifts-lifestyle': 'තෑගි සහ ජීවන රටාව',
+      'prepared-food': 'සූදානම් කළ ආහාර',
+      'health-personal-care': 'සෞඛ්‍ය සහ පුද්ගලික සත්කාර',
+      'household-essentials': 'ගෘහ සහ අත්‍යවශ්‍ය',
+      'storage-others': 'ගබඩා කිරීම සහ වෙනත්',
+      'umbrellas-accessories': 'කුඩ සහ උපාංග',
     },
+    allProducts: 'සියල්ල',
 
     hero: [
       {

@@ -2,46 +2,147 @@
 // API; category metadata (names + images) lives here since the POS has no
 // images. Products are grouped by the POS product's `category` slug.
 
+// Storefront taxonomy: 10 top categories, each with hardcoded subcategories.
+// Keep the slugs in sync with the POS (src/lib/categories.ts) — products are
+// tagged with these category + subcategory slugs.
+const img = (id) => `https://images.unsplash.com/photo-${id}?w=220&h=220&fit=crop`;
+
 export const categories = [
   {
-    name: 'Pantry Staples',
-    slug: 'pantry-staples',
-    image: 'https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=220&h=220&fit=crop',
+    name: 'Beverages & Snacks',
+    slug: 'beverages-snacks',
+    image: img('1621939514649-280e2ee25f60'),
+    subs: [
+      { slug: 'soft-drinks', name: 'Soft Drinks' },
+      { slug: 'juices-cordials', name: 'Juices & Cordials' },
+      { slug: 'water', name: 'Water' },
+      { slug: 'tea-coffee', name: 'Tea & Coffee' },
+      { slug: 'chips-crisps', name: 'Chips & Crisps' },
+      { slug: 'biscuits-cookies', name: 'Biscuits & Cookies' },
+      { slug: 'chocolates-candy', name: 'Chocolates & Candy' },
+      { slug: 'noodles-pasta', name: 'Noodles & Pasta' },
+      { slug: 'nuts-dried-fruit', name: 'Nuts & Dried Fruit' },
+    ],
   },
   {
-    name: 'Snacks & Sweets',
-    slug: 'snacks-sweets',
-    image: 'https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=220&h=220&fit=crop',
+    name: 'Grocery',
+    slug: 'grocery',
+    image: img('1584568694244-14fbdf83bd30'),
+    subs: [
+      { slug: 'rice-grains', name: 'Rice & Grains' },
+      { slug: 'flour-baking', name: 'Flour & Baking' },
+      { slug: 'sugar-sweeteners', name: 'Sugar & Sweeteners' },
+      { slug: 'dhal-pulses', name: 'Dhal & Pulses' },
+      { slug: 'oil-ghee', name: 'Cooking Oil & Ghee' },
+      { slug: 'spices-masala', name: 'Spices & Masala' },
+      { slug: 'sauces-condiments', name: 'Sauces & Condiments' },
+      { slug: 'canned-jarred', name: 'Canned & Jarred' },
+      { slug: 'dairy', name: 'Dairy' },
+      { slug: 'eggs', name: 'Eggs' },
+      { slug: 'breakfast-cereals', name: 'Breakfast & Cereals' },
+    ],
   },
   {
-    name: 'Beverages',
-    slug: 'beverages',
-    image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=220&h=220&fit=crop',
+    name: 'Vegetables & Fruits',
+    slug: 'vegetables-fruits',
+    image: img('1610832958506-aa56368176cf'),
+    subs: [
+      { slug: 'fresh-vegetables', name: 'Fresh Vegetables' },
+      { slug: 'leafy-greens', name: 'Leafy Greens' },
+      { slug: 'fresh-fruits', name: 'Fresh Fruits' },
+      { slug: 'herbs', name: 'Herbs' },
+      { slug: 'exotic-imported', name: 'Exotic & Imported' },
+    ],
   },
   {
-    name: 'Household',
-    slug: 'household',
-    image: 'https://images.unsplash.com/photo-1563453392212-326f5e854473?w=220&h=220&fit=crop',
+    name: 'Frozen & Desserts',
+    slug: 'frozen-desserts',
+    image: img('1567206563064-6f60f40a2b57'),
+    subs: [
+      { slug: 'ice-cream', name: 'Ice Cream' },
+      { slug: 'frozen-snacks', name: 'Frozen Snacks' },
+      { slug: 'frozen-meat-seafood', name: 'Frozen Meat & Seafood' },
+      { slug: 'frozen-vegetables', name: 'Frozen Vegetables' },
+      { slug: 'cakes-pastries', name: 'Cakes & Pastries' },
+      { slug: 'yoghurt-curd', name: 'Yoghurt & Curd' },
+    ],
   },
   {
-    name: 'Personal Care',
-    slug: 'personal-care',
-    image: 'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=220&h=220&fit=crop',
+    name: 'Gifts & Lifestyle',
+    slug: 'gifts-lifestyle',
+    image: img('1549465220-1a8b9238cd48'),
+    subs: [
+      { slug: 'stationery', name: 'Stationery' },
+      { slug: 'toys-games', name: 'Toys & Games' },
+      { slug: 'books', name: 'Books' },
+      { slug: 'greeting-cards', name: 'Greeting Cards' },
+      { slug: 'party-supplies', name: 'Party Supplies' },
+      { slug: 'flowers', name: 'Flowers' },
+    ],
   },
   {
-    name: 'Dairy Products',
-    slug: 'dairy-products',
-    image: 'https://images.unsplash.com/photo-1628088062854-d1870b4553da?w=220&h=220&fit=crop',
+    name: 'Prepared Food',
+    slug: 'prepared-food',
+    image: img('1568901346375-23c9450c58cd'),
+    subs: [
+      { slug: 'ready-meals', name: 'Ready Meals' },
+      { slug: 'short-eats', name: 'Short Eats' },
+      { slug: 'bakery-bread', name: 'Bakery & Bread' },
+      { slug: 'sandwiches-wraps', name: 'Sandwiches & Wraps' },
+      { slug: 'cafe-beverages', name: 'Cafe & Beverages' },
+    ],
   },
   {
-    name: 'Baby Care',
-    slug: 'baby-care',
-    image: 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=220&h=220&fit=crop',
+    name: 'Health & Personal Care',
+    slug: 'health-personal-care',
+    image: img('1571781926291-c477ebfd024b'),
+    subs: [
+      { slug: 'bath-body', name: 'Bath & Body' },
+      { slug: 'hair-care', name: 'Hair Care' },
+      { slug: 'oral-care', name: 'Oral Care' },
+      { slug: 'skin-care', name: 'Skin Care' },
+      { slug: 'feminine-care', name: 'Feminine Care' },
+      { slug: 'baby-care', name: 'Baby Care' },
+      { slug: 'health-wellness', name: 'Health & Wellness' },
+      { slug: 'deodorants-fragrance', name: 'Deodorants & Fragrance' },
+    ],
   },
   {
-    name: 'Pet Supplies',
-    slug: 'pet-supplies',
-    image: 'https://images.unsplash.com/photo-1601758125946-6ec2ef64daf8?w=220&h=220&fit=crop',
+    name: 'Household & Essentials',
+    slug: 'household-essentials',
+    image: img('1563453392212-326f5e854473'),
+    subs: [
+      { slug: 'cleaning-supplies', name: 'Cleaning Supplies' },
+      { slug: 'laundry-care', name: 'Laundry Care' },
+      { slug: 'paper-tissues', name: 'Paper & Tissues' },
+      { slug: 'air-care', name: 'Air Care' },
+      { slug: 'pest-control', name: 'Pest Control' },
+      { slug: 'kitchen-essentials', name: 'Kitchen Essentials' },
+      { slug: 'pet-supplies', name: 'Pet Supplies' },
+    ],
+  },
+  {
+    name: 'Storage and others',
+    slug: 'storage-others',
+    image: img('1600585152220-90363fe7e115'),
+    subs: [
+      { slug: 'food-containers', name: 'Food Containers' },
+      { slug: 'kitchenware', name: 'Kitchenware' },
+      { slug: 'bins-baskets', name: 'Bins & Baskets' },
+      { slug: 'bags-wraps', name: 'Bags & Wraps' },
+      { slug: 'batteries-bulbs', name: 'Batteries & Bulbs' },
+    ],
+  },
+  {
+    name: 'Umbrellas & Accessories',
+    slug: 'umbrellas-accessories',
+    image: img('1517299321609-52687d1bc55a'),
+    subs: [
+      { slug: 'umbrellas', name: 'Umbrellas' },
+      { slug: 'raincoats', name: 'Raincoats' },
+      { slug: 'bags', name: 'Bags' },
+      { slug: 'personal-accessories', name: 'Personal Accessories' },
+    ],
   },
 ];
 
@@ -55,9 +156,10 @@ const POS_API_URL = process.env.POS_API_URL || 'https://easy-drops-pos.vercel.ap
  * Revalidates every 60s so price/stock changes in the POS flow through.
  * Returns [] if the POS is unreachable so pages still render.
  */
-async function fetchProducts({ category, inStock } = {}) {
+async function fetchProducts({ category, subcategory, inStock } = {}) {
   const params = new URLSearchParams();
   if (category) params.set('category', category);
+  if (subcategory) params.set('subcategory', subcategory);
   if (inStock) params.set('inStock', '1');
   const qs = params.toString();
   const url = `${POS_API_URL}/api/products${qs ? `?${qs}` : ''}`;
@@ -74,6 +176,11 @@ async function fetchProducts({ category, inStock } = {}) {
 
 export function getCategoryBySlug(slug) {
   return categories.find((c) => c.slug === slug) || null;
+}
+
+/** Hardcoded subcategories for a category slug (empty if unknown). */
+export function getSubcategories(slug) {
+  return getCategoryBySlug(slug)?.subs ?? [];
 }
 
 export async function getProductsByCategory(slug) {
@@ -109,7 +216,7 @@ export async function getHotDeals(limit = 8) {
 /** Everyday grocery items — used for the "Daily Essentials" row. */
 export async function getDailyEssentials(limit = 8) {
   const products = await getAllProducts();
-  const essentialCats = new Set(['pantry-staples', 'dairy-products']);
+  const essentialCats = new Set(['grocery', 'vegetables-fruits']);
   return products
     .filter((p) => p.inStock && essentialCats.has(p.category))
     .slice(0, limit);

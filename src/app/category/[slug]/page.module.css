@@ -75,3 +75,35 @@
     justify-content: center;
   }
 }
+
+/* Subcategory filter chips */
+.subChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--surface-border);
+  background: var(--surface);
+  color: var(--foreground);
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: var(--transition);
+}
+.chip:hover { border-color: var(--brand-primary); color: var(--brand-primary); }
+.chipActive {
+  background: #4eb938;
+  border-color: #4eb938;
+  color: #072113;
+}
+.chipCount {
+  font-size: 0.72rem;
+  font-weight: 700;
+  opacity: 0.7;
+}
