@@ -46,7 +46,9 @@ export const categories = [
 ];
 
 // Base URL of the POS app that exposes /api/products.
-const POS_API_URL = process.env.POS_API_URL || 'http://localhost:4000';
+// Defaults to the deployed POS so production works without extra config;
+// set POS_API_URL locally (e.g. http://localhost:4000) to point at a dev POS.
+const POS_API_URL = process.env.POS_API_URL || 'https://easy-drops-pos.vercel.app';
 
 /**
  * Fetch products from the POS. Optionally filter by category slug.
