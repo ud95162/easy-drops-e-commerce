@@ -1,0 +1,77 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+.section {
+  padding: 32px 24px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.crumbLink {
+  color: var(--brand-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.crumbLink:hover {
+  text-decoration: underline;
+}
+
+.crumbSep {
+  color: var(--surface-border);
+}
+
+.crumbCurrent {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--brand-dark);
+}
+
+.count {
+  font-size: 15px;
+  color: #6b7c70;
+  font-weight: 500;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.empty {
+  padding: 40px 0;
+  color: #6b7c70;
+  font-size: 16px;
+}
+
+@media (max-width: 640px) {
+  .grid {
+    justify-content: center;
+  }
+}
