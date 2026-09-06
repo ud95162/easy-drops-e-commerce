@@ -2,10 +2,11 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Search, ShoppingCart, User, Languages } from 'lucide-react';
+import { ShoppingCart, User, Languages } from 'lucide-react';
 import { categories } from '../data/catalog';
 import { useI18n } from '../i18n/LanguageProvider';
 import { useCart } from '../store/CartProvider';
+import SearchBar from './SearchBar';
 import styles from './Header.module.css';
 
 export default function Header() {
@@ -27,14 +28,7 @@ export default function Header() {
             />
           </Link>
 
-          <div className={styles.searchContainer}>
-            <Search className={styles.searchIcon} size={20} />
-            <input
-              type="text"
-              placeholder={t.searchPlaceholder}
-              className={styles.searchInput}
-            />
-          </div>
+          <SearchBar />
 
           <div className={styles.actions}>
             <button

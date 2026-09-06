@@ -26,6 +26,15 @@ async function request(path, { method = 'GET', token, body } = {}) {
 }
 
 export const api = {
+  // Full catalog for client-side search (name + category). Returns [].
+  products: async () => {
+    try {
+      const d = await request('/api/products');
+      return Array.isArray(d?.products) ? d.products : [];
+    } catch {
+      return [];
+    }
+  },
   register: (payload) => request('/api/auth/register', { method: 'POST', body: payload }),
   login: (email, password) =>
     request('/api/auth/login', { method: 'POST', body: { email, password } }),

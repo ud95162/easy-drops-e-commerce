@@ -4,6 +4,10 @@
 export const dictionary = {
   en: {
     searchPlaceholder: 'Search for groceries, essentials and more...',
+    searchLoading: 'Searching…',
+    searchNoResults: 'No matches found',
+    searchCategories: 'Categories',
+    searchProducts: 'Products',
     switchTo: 'සිංහල', // label on the toggle: switches TO Sinhala
     account: 'Account',
     cart: 'Cart',
@@ -158,6 +162,10 @@ export const dictionary = {
 
   si: {
     searchPlaceholder: 'සිල්ලර භාණ්ඩ, අත්‍යවශ්‍ය දේ සහ තවත් දේ සොයන්න...',
+    searchLoading: 'සොයමින්…',
+    searchNoResults: 'ගැළපීම් නොමැත',
+    searchCategories: 'වර්ග',
+    searchProducts: 'භාණ්ඩ',
     switchTo: 'English', // label on the toggle: switches TO English
     account: 'ගිණුම',
     cart: 'කරත්තය',
