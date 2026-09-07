@@ -6,7 +6,7 @@ import ProductCard from './ProductCard';
 import { useI18n } from '../i18n/LanguageProvider';
 import styles from './ProductCarousel.module.css';
 
-export default function ProductCarousel({ titleKey, products }) {
+export default function ProductCarousel({ titleKey, products, href = '#' }) {
   const { t } = useI18n();
   const title = t.sections[titleKey] || titleKey;
 
@@ -14,7 +14,7 @@ export default function ProductCarousel({ titleKey, products }) {
     <section className={styles.section}>
       <div className={styles.header}>
         <h2 className={styles.title}>{title}</h2>
-        <Link href="#" className={styles.viewAll}>
+        <Link href={href} className={styles.viewAll}>
           {t.viewAll} <ChevronRight size={16} />
         </Link>
       </div>

@@ -20,11 +20,15 @@ export default async function Home() {
       <HeroCarousel />
       <CategoryGrid categoryImages={categoryImages} />
       {hotDeals.length > 0 && (
-        <ProductCarousel titleKey="hotDeals" products={hotDeals} />
+        <ProductCarousel titleKey="hotDeals" products={hotDeals} href="/collection/hot-deals" />
       )}
       <PromoBanner />
       {essentials.length > 0 && (
-        <ProductCarousel titleKey="dailyEssentials" products={essentials} />
+        <ProductCarousel
+          titleKey="dailyEssentials"
+          products={essentials}
+          href="/collection/daily-essentials"
+        />
       )}
     </div>
   );
