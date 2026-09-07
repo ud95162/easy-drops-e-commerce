@@ -5,12 +5,17 @@ import { useRouter } from 'next/navigation';
 import { Minus, Plus, Trash2, ShoppingBag, ArrowLeft, Image as ImageIcon } from 'lucide-react';
 import { useI18n } from '../../i18n/LanguageProvider';
 import { useCart } from '../../store/CartProvider';
+import { useAuth } from '../../store/AuthProvider';
 import { formatPrice, formatQty, qtyRules } from '../../data/format';
+import { checkFreeDelivery } from '../../data/delivery';
 import styles from './cart.module.css';
 
 export default function CartPage() {
   const { t, productName } = useI18n();
   const { items, ready, setQty, remove, clear, subtotal, count } = useCart();
+  const { user } = useAuth();
+  // If the shopper is signed in with a saved address, show their delivery status.
+  const delivery = checkFreeDelivery(user?.address);
   const router = useRouter();
 
   if (ready && items.length === 0) {
@@ -99,7 +104,9 @@ export default function CartPage() {
           </div>
           <div className={styles.summaryRow}>
             <span>{t.cartPage.delivery}</span>
-            <span className={styles.free}>{t.cartPage.free}</span>
+            <span className={delivery.free || !delivery.known ? styles.free : ''}>
+              {!delivery.known ? t.cartPage.free : delivery.free ? t.cartPage.free : t.deliveryTBC}
+            </span>
           </div>
           <div className={styles.summaryTotal}>
             <span>{t.cartPage.grandTotal}</span>
@@ -108,7 +115,15 @@ export default function CartPage() {
           <button className={styles.checkoutBtn} onClick={() => router.push('/checkout')}>
             {t.cartPage.checkout}
           </button>
-          <p className={styles.deliveryNote}>🛵 {t.deliveryNote}</p>
+          {!delivery.known ? (
+            <p className={styles.deliveryNote}>🛵 {t.deliveryNote}</p>
+          ) : delivery.free ? (
+            <p className={styles.deliveryFree}>
+              🎉 {t.deliveryFreeYes}{delivery.area ? ` (${delivery.area})` : ''}
+            </p>
+          ) : (
+            <p className={styles.deliveryFee}>🛵 {t.deliveryFeeMaybe}</p>
+          )}
         </aside>
       </div>
     </div>

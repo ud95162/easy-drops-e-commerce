@@ -8,6 +8,7 @@ import { useCart } from '../../store/CartProvider';
 import { useAuth } from '../../store/AuthProvider';
 import { api } from '../../data/api';
 import { formatPrice, formatQty } from '../../data/format';
+import { checkFreeDelivery } from '../../data/delivery';
 import styles from './checkout.module.css';
 
 export default function CheckoutPage() {
@@ -32,6 +33,9 @@ export default function CheckoutPage() {
   }, [user]);
 
   const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
+
+  // Free-delivery status derived from the address as the customer types.
+  const delivery = checkFreeDelivery(form.address);
 
   const submit = async (e) => {
     e.preventDefault();
@@ -116,6 +120,13 @@ export default function CheckoutPage() {
             <span>{t.checkout.address}</span>
             <textarea value={form.address} onChange={set('address')} rows={3} required />
           </label>
+          {delivery.known && (
+            <p className={delivery.free ? styles.deliveryFree : styles.deliveryFee}>
+              {delivery.free
+                ? `🎉 ${t.deliveryFreeYes}${delivery.area ? ` (${delivery.area})` : ''}`
+                : `🛵 ${t.deliveryFeeMaybe}`}
+            </p>
+          )}
           <label className={styles.field}>
             <span>{t.checkout.note}</span>
             <input value={form.note} onChange={set('note')} />
@@ -154,12 +165,19 @@ export default function CheckoutPage() {
             <span>{t.cartPage.subtotal}</span><span>{formatPrice(subtotal)}</span>
           </div>
           <div className={styles.summaryRow}>
-            <span>{t.cartPage.delivery}</span><span className={styles.free}>{t.cartPage.free}</span>
+            <span>{t.cartPage.delivery}</span>
+            <span className={delivery.free ? styles.free : ''}>
+              {!delivery.known
+                ? '—'
+                : delivery.free
+                  ? t.cartPage.free
+                  : t.deliveryTBC}
+            </span>
           </div>
           <div className={styles.summaryTotal}>
             <span>{t.cartPage.grandTotal}</span><span>{formatPrice(subtotal)}</span>
           </div>
-          <p className={styles.deliveryNote}>🛵 {t.deliveryNote}</p>
+          {!delivery.known && <p className={styles.deliveryNote}>🛵 {t.deliveryNote}</p>}
         </aside>
       </div>
     </div>

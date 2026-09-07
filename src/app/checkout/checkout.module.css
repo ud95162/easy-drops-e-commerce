@@ -101,3 +101,25 @@
   line-height: 1.45;
   text-align: center;
 }
+
+.deliveryFree {
+  margin-top: 6px;
+  padding: 9px 12px;
+  background: #e8f7e2;
+  border: 1px solid #b6e3a6;
+  border-radius: 10px;
+  color: #2f7d1f;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+.deliveryFee {
+  margin-top: 6px;
+  padding: 9px 12px;
+  background: #fff4e0;
+  border: 1px solid #f6ddb0;
+  border-radius: 10px;
+  color: #b7791f;
+  font-size: 0.82rem;
+  font-weight: 500;
+  line-height: 1.4;
+}

@@ -11,6 +11,10 @@ export const dictionary = {
     deliveryNote:
       'Free delivery to Malabe, Athurugiriya, Homagama & Kaduwela. A small delivery fee applies to other areas.',
     freeDeliveryAreas: 'Free delivery: Malabe · Athurugiriya · Homagama · Kaduwela',
+    deliveryFreeYes: 'Delivery is FREE to your area!',
+    deliveryFeeMaybe:
+      "A delivery fee may apply to your area — we'll confirm the total when we call.",
+    deliveryTBC: 'To confirm',
     switchTo: 'සිංහල', // label on the toggle: switches TO Sinhala
     account: 'Account',
     cart: 'Cart',
@@ -172,6 +176,10 @@ export const dictionary = {
     deliveryNote:
       'මාලබේ, අතුරුගිරිය, හෝමාගම සහ කඩුවෙල ප්‍රදේශවලට නොමිලේ බෙදාහැරීම. වෙනත් ප්‍රදේශවලට කුඩා බෙදාහැරීමේ ගාස්තුවක් අදාළ වේ.',
     freeDeliveryAreas: 'නොමිලේ බෙදාහැරීම: මාලබේ · අතුරුගිරිය · හෝමාගම · කඩුවෙල',
+    deliveryFreeYes: 'ඔබගේ ප්‍රදේශයට බෙදාහැරීම නොමිලේ!',
+    deliveryFeeMaybe:
+      'ඔබගේ ප්‍රදේශයට බෙදාහැරීමේ ගාස්තුවක් අදාළ විය හැක — අප ඇමතූ විට මුළු මුදල තහවුරු කරමු.',
+    deliveryTBC: 'තහවුරු කිරීමට',
     switchTo: 'English', // label on the toggle: switches TO English
     account: 'ගිණුම',
     cart: 'කරත්තය',
