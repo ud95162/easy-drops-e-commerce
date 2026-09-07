@@ -10,6 +10,16 @@ import { api } from '../../data/api';
 import { formatPrice } from '../../data/format';
 import styles from './account.module.css';
 
+const STATUS_LABELS = {
+  PENDING: 'Pending',
+  ACCEPTED: 'Accepted',
+  PREPARING: 'Preparing',
+  DISPATCHED: 'Dispatched',
+  DELIVERED: 'Delivered',
+  PAID: 'Accepted',
+  CANCELLED: 'Cancelled',
+};
+
 export default function AccountPage() {
   const { t } = useI18n();
   const { isLoggedIn, ready } = useAuth();
@@ -216,7 +226,7 @@ function Dashboard() {
                 <div key={o.id} className={styles.order}>
                   <div className={styles.orderTop}>
                     <span className={styles.orderId}>{t.account.orderNo} #{o.id.slice(-6).toUpperCase()}</span>
-                    <span className={`${styles.status} ${styles['s_' + o.status]}`}>{o.status}</span>
+                    <span className={`${styles.status} ${styles['s_' + o.status]}`}>{STATUS_LABELS[o.status] || o.status}</span>
                   </div>
                   <div className={styles.orderMeta}>
                     {t.account.placedOn} {fmtDate(o.createdAt)} · {o.items.length} {o.items.length === 1 ? t.itemOne : t.itemMany}

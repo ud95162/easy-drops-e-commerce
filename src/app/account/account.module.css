@@ -82,7 +82,10 @@
 .orderId { font-weight: 800; color: var(--brand-dark); }
 .status { font-size: 0.72rem; font-weight: 800; padding: 3px 10px; border-radius: 999px; text-transform: uppercase; }
 .s_PENDING { background: #fff4e0; color: #b7791f; }
-.s_PAID { background: #e8f7e2; color: #2f7d1f; }
+.s_ACCEPTED, .s_PAID { background: #e0f0fb; color: #1f6fb2; }
+.s_PREPARING { background: #ecebfb; color: #5145cd; }
+.s_DISPATCHED { background: #f1ecfb; color: #7c3aed; }
+.s_DELIVERED { background: #e8f7e2; color: #2f7d1f; }
 .s_CANCELLED { background: #fdecec; color: var(--discount); }
 .orderMeta { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 10px; }
 .orderItems { display: flex; flex-direction: column; gap: 4px; border-top: 1px dashed var(--surface-border); padding-top: 10px; }
