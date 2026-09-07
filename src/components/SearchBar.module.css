@@ -139,3 +139,13 @@
 @media (max-width: 768px) {
   .wrap { margin: 0 12px; }
 }
+
+/* Mobile: search drops to its own full-width row below logo + icons. */
+@media (max-width: 640px) {
+  .wrap {
+    order: 3;
+    flex: 0 0 100%;
+    max-width: none;
+    margin: 0;
+  }
+}

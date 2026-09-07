@@ -37,7 +37,7 @@ export default function Header() {
               aria-label="Switch language"
             >
               <Languages size={18} />
-              {t.switchTo}
+              <span className={styles.langLabel}>{t.switchTo}</span>
             </button>
             <Link href="/account" className={styles.actionButton} aria-label={t.account}>
               <User size={24} />

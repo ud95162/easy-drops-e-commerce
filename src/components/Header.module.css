@@ -192,3 +192,45 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+/* ---- Mobile: logo + icons on row 1, full-width search on row 2 ---- */
+@media (max-width: 640px) {
+  .header {
+    height: auto;
+  }
+  .container {
+    flex-wrap: wrap;
+    padding: 10px 14px;
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+  .logo {
+    order: 1;
+  }
+  .actions {
+    order: 2;
+    gap: 14px;
+  }
+  .logoImg {
+    height: 34px;
+  }
+  /* Language toggle becomes an icon-only circular button */
+  .langButton {
+    padding: 7px;
+    border-radius: 50%;
+  }
+  .langLabel {
+    display: none;
+  }
+  .categoriesList {
+    gap: 18px;
+    padding: 11px 14px;
+  }
+  .categoryItem {
+    font-size: 13px;
+  }
+  .deliveryBar {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+}
