@@ -59,21 +59,24 @@
 }
 
 .grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* mobile: exactly 2 per row */
+  gap: 16px;
+}
+@media (min-width: 560px) {
+  .grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+}
+@media (min-width: 820px) {
+  .grid { grid-template-columns: repeat(4, 1fr); }
+}
+@media (min-width: 1080px) {
+  .grid { grid-template-columns: repeat(5, 1fr); }
 }
 
 .empty {
   padding: 40px 0;
   color: #6b7c70;
   font-size: 16px;
-}
-
-@media (max-width: 640px) {
-  .grid {
-    justify-content: center;
-  }
 }
 
 /* Subcategory filter chips */

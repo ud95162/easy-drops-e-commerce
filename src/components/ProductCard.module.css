@@ -7,9 +7,9 @@
   transition: var(--transition);
   position: relative;
   overflow: hidden;
-  min-width: 180px;
-  max-width: 200px;
-  flex: 0 0 auto;
+  /* Fill the container (grid cell). The horizontal carousel gives its items a
+     fixed width instead — see ProductCarousel.module.css. */
+  width: 100%;
 }
 
 .card:hover {

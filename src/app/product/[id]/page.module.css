@@ -119,8 +119,17 @@
 .relatedTitle { font-size: 1.4rem; font-weight: 800; color: var(--brand-dark); margin-bottom: 18px; }
 .relatedGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr); /* mobile: exactly 2 per row */
+  gap: 16px;
+}
+@media (min-width: 560px) {
+  .relatedGrid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+}
+@media (min-width: 820px) {
+  .relatedGrid { grid-template-columns: repeat(4, 1fr); }
+}
+@media (min-width: 1080px) {
+  .relatedGrid { grid-template-columns: repeat(5, 1fr); }
 }
 
 @media (max-width: 768px) {

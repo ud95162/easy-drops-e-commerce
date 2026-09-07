@@ -41,6 +41,18 @@
   -ms-overflow-style: none; /* IE/Edge */
 }
 
+/* Fixed-width cards in the horizontal scroller (flex-basis overrides the
+   card's width:100%). Two peek on a phone; more on wider screens. */
+.carousel > * {
+  flex: 0 0 44%;
+  max-width: 200px;
+}
+@media (min-width: 560px) {
+  .carousel > * {
+    flex: 0 0 190px;
+  }
+}
+
 .carousel::-webkit-scrollbar {
   display: none; /* Chrome/Safari */
 }
