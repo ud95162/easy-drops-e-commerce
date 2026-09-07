@@ -14,7 +14,7 @@ export default function Header() {
   const { count } = useCart();
 
   return (
-    <>
+    <div className={styles.headerWrap}>
       <header className={styles.header}>
         <div className={styles.container}>
           <Link href="/" className={styles.logo}>
@@ -66,6 +66,6 @@ export default function Header() {
         <Truck size={15} />
         <span>{t.freeDeliveryAreas}</span>
       </div>
-    </>
+    </div>
   );
 }

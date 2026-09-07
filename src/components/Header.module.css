@@ -1,14 +1,20 @@
-.header {
-  position: fixed;
+/* The whole header (top bar + categories + delivery bar) sticks to the top as
+   one unit; being sticky keeps it in normal flow, so page content starts right
+   after it (no manual offset needed) and it stays pinned on scroll. */
+.headerWrap {
+  position: sticky;
   top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+}
+
+.header {
   width: 100%;
   background-color: #072113;
   color: var(--surface);
   height: var(--nav-height);
   display: flex;
   align-items: center;
-  z-index: 100;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
 }
 
 .container {
@@ -135,10 +141,7 @@
   background-color: #0b2818;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  position: fixed;
-  top: var(--nav-height);
   width: 100%;
-  z-index: 99;
 }
 
 .categoriesList {
