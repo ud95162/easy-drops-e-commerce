@@ -2,10 +2,11 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Plus, Check, Image as ImageIcon } from 'lucide-react';
+import { Plus, Check } from 'lucide-react';
 import { useI18n } from '../i18n/LanguageProvider';
 import { useCart } from '../store/CartProvider';
 import { qtyRules } from '../data/format';
+import ProductImage from './ProductImage';
 import styles from './ProductCard.module.css';
 
 const formatPrice = (n) =>
@@ -36,12 +37,12 @@ export default function ProductCard({ product }) {
       ) : null}
 
       <Link href={`/product/${product.id}`} className={styles.imageContainer}>
-        {imageUrl ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src={imageUrl} alt={name} className={styles.productImage} />
-        ) : (
-          <ImageIcon className={styles.placeholder} strokeWidth={1} />
-        )}
+        <ProductImage
+          src={imageUrl}
+          alt={name}
+          className={styles.productImage}
+          placeholderClass={styles.placeholder}
+        />
       </Link>
 
       <button className={styles.addButton} onClick={onAdd} aria-label={`${t.add} — ${name}`}>

@@ -3,8 +3,9 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { ChevronRight, Minus, Plus, ShoppingCart, Check, Image as ImageIcon } from 'lucide-react';
+import { ChevronRight, Minus, Plus, ShoppingCart, Check } from 'lucide-react';
 import ProductCard from '../../../components/ProductCard';
+import ProductImage from '../../../components/ProductImage';
 import { useI18n } from '../../../i18n/LanguageProvider';
 import { useCart } from '../../../store/CartProvider';
 import { formatPrice, formatQty, qtyRules } from '../../../data/format';
@@ -56,12 +57,12 @@ export default function ProductDetail({ product, related }) {
           {discountPercentage ? (
             <span className={styles.badge}>{discountPercentage}% {t.off}</span>
           ) : null}
-          {imageUrl ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={imageUrl} alt={name} className={styles.image} />
-          ) : (
-            <ImageIcon className={styles.placeholder} strokeWidth={1} />
-          )}
+          <ProductImage
+            src={imageUrl}
+            alt={name}
+            className={styles.image}
+            placeholderClass={styles.placeholder}
+          />
         </div>
 
         <div className={styles.info}>

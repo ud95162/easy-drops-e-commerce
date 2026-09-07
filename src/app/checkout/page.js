@@ -137,7 +137,7 @@ export default function CheckoutPage() {
                 <span className={styles.lineThumb}>
                   {l.imageUrl ? (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={l.imageUrl} alt="" />
+                    <img src={l.imageUrl} alt="" loading="lazy" decoding="async" />
                   ) : (
                     <ImageIcon size={18} className={styles.linePh} />
                   )}
@@ -159,6 +159,7 @@ export default function CheckoutPage() {
           <div className={styles.summaryTotal}>
             <span>{t.cartPage.grandTotal}</span><span>{formatPrice(subtotal)}</span>
           </div>
+          <p className={styles.deliveryNote}>🛵 {t.deliveryNote}</p>
         </aside>
       </div>
     </div>

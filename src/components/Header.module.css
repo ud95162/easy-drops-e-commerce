@@ -1,6 +1,7 @@
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%;
   background-color: #072113;
   color: var(--surface);
   height: var(--nav-height);
@@ -134,8 +135,9 @@
   background-color: #0b2818;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  position: sticky;
+  position: fixed;
   top: var(--nav-height);
+  width: 100%;
   z-index: 99;
 }
 
@@ -169,4 +171,21 @@
 .categoryLink {
   color: inherit;
   text-decoration: none;
+}
+.deliveryBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--brand-primary);
+  color: #06230f;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 7px 16px;
+  text-align: center;
+}
+.deliveryBar span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

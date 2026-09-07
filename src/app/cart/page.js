@@ -42,7 +42,7 @@ export default function CartPage() {
                 <Link href={`/product/${line.id}`} className={styles.thumb}>
                   {line.imageUrl ? (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={line.imageUrl} alt={name} />
+                    <img src={line.imageUrl} alt={name} loading="lazy" decoding="async" />
                   ) : (
                     <ImageIcon size={28} className={styles.thumbPh} />
                   )}
@@ -108,6 +108,7 @@ export default function CartPage() {
           <button className={styles.checkoutBtn} onClick={() => router.push('/checkout')}>
             {t.cartPage.checkout}
           </button>
+          <p className={styles.deliveryNote}>🛵 {t.deliveryNote}</p>
         </aside>
       </div>
     </div>

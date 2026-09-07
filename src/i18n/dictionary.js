@@ -8,6 +8,9 @@ export const dictionary = {
     searchNoResults: 'No matches found',
     searchCategories: 'Categories',
     searchProducts: 'Products',
+    deliveryNote:
+      'Free delivery to Malabe, Athurugiriya, Homagama & Kaduwela. A small delivery fee applies to other areas.',
+    freeDeliveryAreas: 'Free delivery: Malabe · Athurugiriya · Homagama · Kaduwela',
     switchTo: 'සිංහල', // label on the toggle: switches TO Sinhala
     account: 'Account',
     cart: 'Cart',
@@ -166,6 +169,9 @@ export const dictionary = {
     searchNoResults: 'ගැළපීම් නොමැත',
     searchCategories: 'වර්ග',
     searchProducts: 'භාණ්ඩ',
+    deliveryNote:
+      'මාලබේ, අතුරුගිරිය, හෝමාගම සහ කඩුවෙල ප්‍රදේශවලට නොමිලේ බෙදාහැරීම. වෙනත් ප්‍රදේශවලට කුඩා බෙදාහැරීමේ ගාස්තුවක් අදාළ වේ.',
+    freeDeliveryAreas: 'නොමිලේ බෙදාහැරීම: මාලබේ · අතුරුගිරිය · හෝමාගම · කඩුවෙල',
     switchTo: 'English', // label on the toggle: switches TO English
     account: 'ගිණුම',
     cart: 'කරත්තය',

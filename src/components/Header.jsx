@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { ShoppingCart, User, Languages } from 'lucide-react';
+import { ShoppingCart, User, Languages, Truck } from 'lucide-react';
 import { categories } from '../data/catalog';
 import { useI18n } from '../i18n/LanguageProvider';
 import { useCart } from '../store/CartProvider';
@@ -61,6 +61,11 @@ export default function Header() {
           ))}
         </ul>
       </nav>
+
+      <div className={styles.deliveryBar}>
+        <Truck size={15} />
+        <span>{t.freeDeliveryAreas}</span>
+      </div>
     </>
   );
 }
