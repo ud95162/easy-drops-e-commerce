@@ -133,14 +133,62 @@
 
 @media (max-width: 768px) {
   .heroSection {
-    height: 350px;
+    height: 340px;
   }
-
+  .content {
+    padding: 0 20px;
+  }
   .title {
-    font-size: 32px;
+    font-size: 30px;
+    max-width: 340px;
   }
-
   .description {
     font-size: 15px;
+    max-width: 320px;
+    margin-bottom: 24px;
+  }
+  .products {
+    max-width: 52%;
+    height: 88%;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    height: 300px;
+    margin-bottom: 28px;
+  }
+  .badge {
+    font-size: 11px;
+    padding: 4px 10px;
+    margin-bottom: 10px;
+  }
+  .title {
+    font-size: 23px;
+    line-height: 1.15;
+    margin-bottom: 10px;
+    max-width: 230px;
+  }
+  .description {
+    font-size: 13px;
+    margin-bottom: 16px;
+    max-width: 210px;
+    /* keep to two lines so it never runs under the product image */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .button {
+    padding: 11px 22px;
+    font-size: 14px;
+  }
+  .products {
+    max-width: 48%;
+    height: 66%;
+    right: 0;
+  }
+  .controls {
+    bottom: 14px;
   }
 }
