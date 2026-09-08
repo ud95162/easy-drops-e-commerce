@@ -139,3 +139,16 @@
   .price { font-size: 1.6rem; }
   .actions { flex-direction: column; }
 }
+
+/* ---- Small phones ---- */
+@media (max-width: 640px) {
+  .page { padding: 16px; }
+  .breadcrumb { margin-bottom: 14px; font-size: 13px; }
+  .detail { padding: 14px; }
+  .gallery { min-height: 220px; padding: 16px; }
+  .title { font-size: 1.4rem; }
+  .price { font-size: 1.55rem; }
+  .desc { font-size: 0.9rem; margin-top: 14px; }
+  .related { margin-top: 32px; }
+  .relatedTitle { font-size: 1.2rem; margin-bottom: 14px; }
+}

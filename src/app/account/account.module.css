@@ -95,3 +95,17 @@
 @media (max-width: 820px) {
   .grid { grid-template-columns: 1fr; }
 }
+
+/* ---- Mobile ---- */
+@media (max-width: 640px) {
+  .page { padding: 16px; }
+  .authWrap { margin: 12px auto; }
+  .card, .panel { padding: 16px; }
+  .dashHeader { padding: 16px; gap: 12px; }
+  .avatar { width: 48px; height: 48px; }
+  .name { font-size: 1.05rem; }
+  .email { font-size: 0.82rem; word-break: break-word; }
+  .signOut { padding: 7px 12px; font-size: 0.82rem; }
+  .panelTitle { font-size: 1rem; }
+  .order { padding: 14px; }
+}
