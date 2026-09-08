@@ -59,3 +59,24 @@
   color: #6b7c70;
   font-size: 16px;
 }
+
+/* ---- Mobile ---- */
+@media (max-width: 640px) {
+  .section {
+    padding: 20px 16px;
+  }
+  .breadcrumb {
+    font-size: 13px;
+    margin-bottom: 14px;
+  }
+  .header {
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+  .title {
+    font-size: 22px;
+  }
+  .count {
+    font-size: 13px;
+  }
+}
